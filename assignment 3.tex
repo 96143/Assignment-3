@@ -1,22 +1,12 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-%
+
 \usepackage{setspace}
 \usepackage{gensymb}
-%\doublespacing
 \singlespacing
-
-%\usepackage{graphicx}
-%\usepackage{amssymb}
-%\usepackage{relsize}
 \usepackage[cmex10]{amsmath}
-%\usepackage{amsthm}
-%\interdisplaylinepenalty=2500
-%\savesymbol{iint} 
-%\usepackage{txfonts}
-%\restoresymbol{TXF}{iint}
-%\usepackage{wasysym}
+
 \usepackage{amsthm}
-%\usepackage{iithtlc}
+
 \usepackage{mathrsfs}
 \usepackage{txfonts}
 \usepackage{stfloats}
@@ -24,11 +14,10 @@
 \usepackage{cite}
 \usepackage{cases}
 \usepackage{subfig}
-%\usepackage{xtab}
+
 \usepackage{longtable}
 \usepackage{multirow}
-%\usepackage{algorithm}
-%\usepackage{algpseudocode}
+
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -37,9 +26,9 @@
 \usepackage{verbatim}
 \usepackage{tfrupee}
 \usepackage[breaklinks=true]{hyperref}
-%\usepackage{stmaryrd}
-\usepackage{tkz-euclide} % loads  TikZ and tkz-base
-%\usetkzobj{all}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
 \usetikzlibrary{calc,math}
 \usepackage{listings}
     \usepackage{color}                                            %%
@@ -49,16 +38,12 @@
     \usepackage{multirow}                                         %%
     \usepackage{hhline}                                           %%
     \usepackage{ifthen}                                           %%
-  %optionally (for landscape tables embedded in another document): %%
     \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
-%\usepackage{enumerate}
 
-%\usepackage{wasysym}
-%\newcounter{MYtempeqncnt}
 \DeclareMathOperator*{\Res}{Res}
-%\renewcommand{\baselinestretch}{2}
+
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
@@ -67,7 +52,7 @@
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 
-% correct bad hyphenation here
+
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
 
@@ -77,14 +62,7 @@ frame=single,
 breaklines=true,
 columns=fullflexible
 }
-%\lstset{
-%language=tex,
-%frame=single, 
-%breaklines=true
-%}
-
 \begin{document}
-%
 
 
 \newtheorem{theorem}{Theorem}[section]
@@ -94,15 +72,13 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section] 
-%\newtheorem{defn}[thm]{Definition}
-%\newtheorem{algorithm}{Algorithm}[section]
-%\newtheorem{cor}{Corollary}
+
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
 \bibliographystyle{IEEEtran}
-%\bibliographystyle{ieeetr}
+\raggedbottom
+\setlength{\parindent}{0pt}
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -133,187 +109,77 @@ columns=fullflexible
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-%\numberwithin{equation}{section}
 \numberwithin{equation}{subsection}
-%\numberwithin{problem}{section}
-%\numberwithin{definition}{section}
 \makeatletter
 \@addtoreset{figure}{problem}
 \makeatother
 \let\StandardTheFigure\thefigure
 \let\vec\mathbf
-%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 \renewcommand{\thefigure}{\theproblem}
-%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
-%\counterwithin{equation}{enumi}
-%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
 \def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
      \def\rightbox#1{\makebox[0in][r]{#1}}
      \def\centbox#1{\makebox[0in]{#1}}
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{Assignment 2}
-\author{Pradyumn Sharma}
-%\title{
-%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
-%}
-% paper title
-% can use linebreaks \\ within to get better formatting as desired
-%\title{Matrix Analysis through Octave}
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
-%\author{<-this % stops a space
-%\thanks{}}
-%}
-% note the % following the last \IEEEmembership and also \thanks - 
-% these prevent an unwanted space from occurring between the last author name
-% and the end of the author line. i.e., if you had this:
-% 
-% \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
-%
-% a space would be appended to the last name and could cause every name on that
-% line to be shifted left slightly. This is one of those "LaTeX things". For
-% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
-% "AB" then you have to do: "\textbf{A}\textbf{B}"
-% \thanks is no different in this regard, so shield the last } of each \thanks
-% that ends a line with a % and do not let a space in before the next \thanks.
-% Spaces after \IEEEmembership other than the last one are OK (and needed) as
-% you are supposed to have spaces between the names. For what it is worth,
-% this is a minor point as most people would not even notice if the said evil
-% space somehow managed to creep in.
-% The paper headers
-%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
-%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
-% The only time the second header will appear is for the odd numbered pages
-% after the title page when using the twoside option.
-% 
-% *** Note that you probably will NOT want to include the author's ***
-% *** name in the headers of peer review papers.                   ***
-% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
-% you desire.
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-% make the title area
+\title{AI5002: Assignment 3}
+\author{Pradyumn Sharma\\ AI21MTECH02001}
 \maketitle
 \newpage
-%\tableofcontents
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-%\renewcommand{\theequation}{\theenumi}
-%\begin{abstract}
-%%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
-%
-%\end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the journal you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals frown on math
-% in the abstract anyway.
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%Cooperative diversity, decode and forward, piecewise linear
-%\end{IEEEkeywords}
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-%\IEEEpeerreviewmaketitle
-\vspace{2ex}
-\begin{center}
-%{\underline{\Large \bf Determinant}}
-\end{center}
-Download all Python codes from
+Download Python codes from 
 \begin{lstlisting}
-https://github.com/96143/Assignment-2/blob/main/question%201.1.ipynb
-https://github.com/96143/Assignment-2/blob/main/question%201.2.ipynb
+https://github.com/96143/Assignment-3/blob/main/assignment%203.ipnyb
 \end{lstlisting}
 %
-Download latex codes from 
+and latex codes from 
 %
 \begin{lstlisting}
-https://github.com/96143/Assignment-2/blob/main/1.1
+https://github.com/96143/Assignment-3/tree/main
 \end{lstlisting}
-%
-\section{Problem 1.1}
-A jar contains 24 marbles, some are green and
-others are blue. If a marble is drawn at random
-from the jar, the probability that it is green is
- $\frac{2}{3}$.
-Find the number of blue marbles in the jar.
-\section{Solution 1.1} 
+\section{Problem}
+A laboratory blood test is 99\% effective in detecting a certain disease when it is in fact, present. However, the test also yields a false positive result for 0.5\% of the healthy person tested (i.e. if a healthy person is tested, then, with probability 0.005, the test will imply he has the disease). If 0.1 percent of the population actually has the disease, what is the probability that a person has the disease given that his test result is positive?
+\section{Solution}
+Let,\\
+   A : Person has disease \\
+   B : Person does not have the disease \\
+   C : test result is positive \\
+
+We need to find the Probability that the person has the disease given that his test result is positive
 \\
-Let X be the random variable that denotes whether the drawn marble is blue or green\\
-We know,\\*
-Bernoulli Distribution 
 \begin{align}
-P(x) = 
-\begin{cases}  
-      p^x (1-p)^{1-x}  & x=0,1;  p+q=1\\*
-        0
-       \end{cases}
-\end{align}
-In Bernoulli Distribution\\*
-         Mean -
-         \begin{align}
-         \Sigma x = 	\mu_{1}^{1} = p
-         \end{align}
-         We have probability of green marbles is $\frac{2}{3}$
-i.e. Mean = $p = \frac{2}{3}$ \\*
-\begin{align}
-  \therefore \frac{\Sigma x}{N} = \frac{2}{3} \\
-  \frac{\Sigma x}{24} = \frac{2}{3}  \\
-  \therefore \Sigma x = 16
+    P(A|C)= \frac{P(A) \times P (C|A)}{P (B) \times P (C|B) + P(A) \times P (C|A)}
 \end{align}
 \\
-No of Green Marbles is 16 \\
-such that we have total marbles = 24 \\
-Therefore, blue marbles = 24 - 16 = 8 Marbles
- \section{Problem 1.2}
-A bag contains lemon flavoured candies only.
-Malini takes out one candy without looking
-into the bag. What is the probability that she takes out ?
-\begin{enumerate}
-    \item an orange flavoured candy? 
-    \item a lemon flavoured candy?
-\end{enumerate}
-\section{Solution 1.2} 
-\begin{enumerate}
-\item
-Probability of taking lemon flavoured candy = $P(L)$ \\
-Probability of taking orange flavoured candy = $P(O)$ \\
-The bag contains only lemon flavored candies, and nothing else.
-Therefore,
+$&P(A)$ = Probability that the person has disease\\
 \begin{align}
-    P(O) = P(X=1) = 0
+    = 0.1\% = \frac{0.1}{100} = 0.001
 \end{align}
-The probability of taking out an orange flavored candy = 0 
-\vspace{5mm} %5mm vertical space
-\\
-\item The bag only contains lemon flavored candies. \\
-Therefore,
+$&P(B)$ = Probability that the person does not have the disease \\
 \begin{align}
-    P(L) = P(X=0) = 1
+    = 99.9\% = \frac{99.9}{100} = 0.999
 \end{align}
-Therefore, the probability of taking out a lemon flavored candy = 1
-\end{enumerate}
+$&P(C|A)$ = Probability that the test result is positive, if the person has disease\\
+\begin{align}
+    = 99\% = \frac{99}{100} = 0.99
+\end{align}
+$&P(C|A^c)$ = Probability that the test result is positive, if the person does not have the disease\\
+\begin{align}
+    = 0.005
+\end{align}
+Putting the values in the formula,
+\begin{align}
+    P\brak{A|C} = \frac{0.001 \times 0.99}{0.999 \times 0.005 + 0.001 \times 0.99}
+\end{align}
+
+\begin{align}
+    P\brak{A|C} = \frac{99 \times 10 ^{-5}}{499.5 \times 10 ^{-5} + 0.001 \times 0.99}\\[1em]
+    P\brak{A|C} = \frac{99 \times 10 ^{-5}}{ 10^{-5} [499.5 + 0.99]}\\[1em]
+    P\brak{A|C} = \frac{99}{598.5}\\[1em]
+    P\brak{A|C} = \frac{990}{5985}\\[1em]
+    P\brak{A|C} = \frac{22}{133}
+\end{align}
+Therefore, the required probability is $\frac{22}{133}$
 \end{document}
