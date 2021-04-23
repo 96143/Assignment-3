@@ -150,31 +150,31 @@ Let,\\
 We need to find the Probability that the person has the disease given that his test result is positive
 \\
 \begin{align}
-    P(A|C)= \frac{P(A)  P (C|A)}{P (B) P (C|B) + P(A)  P (C|A)}
+    \pr{A|C}= \frac{\pr{A}  \pr{C|A}}{\pr{B} \pr{C|B}) + \pr{A}  \pr{C|A}}
 \end{align}
 \\
-$&P(A)$ = Probability that the person has disease\\
+$\pr{A}$ = Probability that the person has disease\\
 \begin{align}
     = 0.1\% = \frac{0.1}{100} = 0.001
 \end{align}
-$&P(B)$ = Probability that the person does not have the disease \\
+$\pr{B}$ = Probability that the person does not have the disease \\
 \begin{align}
     = 99.9\% = \frac{99.9}{100} = 0.999
 \end{align}
-$&P(C|A)$ = Probability that the test result is positive, if the person has disease\\
+$\pr{C|A}$ = Probability that the test result is positive, if the person has disease\\
 \begin{align}
     = 99\% = \frac{99}{100} = 0.99
 \end{align}
-$&P(C|A^c)$ = Probability that the test result is positive, if the person does not have the disease\\
+$\pr{C|A^c}$ = Probability that the test result is positive, if the person does not have the disease\\
 \begin{align}
     = 0.005
 \end{align}
 Putting the values in the formula,
 \begin{align}
-    P\brak{A|C} = \frac{0.001 \times 0.99}{0.999 \times 0.005 + 0.001 \times 0.99}
+    \pr{A|C} = \frac{0.001 \times 0.99}{0.999 \times 0.005 + 0.001 \times 0.99}
 \end{align}
 \begin{align*}
-    P\brak{A|C} = \frac{99 \times 10 ^{-5}}{499.5 \times 10 ^{-5} + 0.001 \times 0.99}\\[1em]
+   \pr{A|C} = \frac{99 \times 10 ^{-5}}{499.5 \times 10 ^{-5} + 0.001 \times 0.99}\\[1em]
      = \frac{99 \times 10 ^{-5}}{ 10^{-5} [499.5 + 0.99]}\\[1em]
      = \frac{99}{598.5}\\[1em]
      = \frac{990}{5985}\\[1em]
